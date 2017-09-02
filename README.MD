@@ -1,4 +1,4 @@
-![Browser Support](H:/PROJEKTY/sprites.js.png)
+![logo](docs/img/sprites.js.png)
 
 
 JavaScript lightweight and simple in usage library that helps animating canvas sprites. What makes sprite.js so special is ability to controll frame rate without using `setTimeout()` or `setInterval()`.
