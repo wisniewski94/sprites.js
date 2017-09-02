@@ -1,0 +1,25 @@
+{
+  "name": "sprite.js",
+  "main": "sprite.js",
+  "description": "lightweight and simple library that helps animating canvas sprites.",
+  "keywords": [
+    "sprite.js",
+    "javascript",
+    "canvas",
+    "sprite",
+    "requestAnimationFrame",
+    "animation"
+  ],
+  "authors": [
+    "Wiktor Wiśniewski"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

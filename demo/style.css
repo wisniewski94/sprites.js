@@ -1,0 +1,104 @@
+body {
+    background-color: #efe7ca;
+    font-family: 'Roboto', sans-serif;
+    /*font-family: Courier New,monospace,serif;*/
+}
+
+.section {
+    margin: 0 auto;
+    width: 800px;
+}
+
+h4 {
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #df4e07;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+p {
+    text-align: center;
+}
+
+b {
+    font-weight: 600;
+}
+
+.b {
+    float: right;
+    margin-top: 10px;
+}
+
+.github {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.github svg {
+    margin-bottom: 15px;
+}
+
+.desc {
+    margin-top: 10px;
+    color: #7a7150;
+    text-indent: 20px;
+}
+
+.section1 {
+    display: table;
+    margin: 0 auto;
+}
+
+.img {
+    overflow: auto;
+    height: 177px;
+}
+
+spans {
+    font-weight: 600;
+    font-size: 21px;
+    margin: 0 auto;
+    display: table;
+    margin-top: 30px;
+    margin-bottom: 27px;
+}
+
+.e1 p {
+    text-align: left;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.ex {
+    display: table;
+    margin: 0 auto;
+}
+
+.glogo {
+    display: table;
+    margin: 0 auto;
+}
+
+.a {
+    font-size: 11px
+}
+
+.a:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.a:nth-of-type(2) {
+    margin-bottom: 40px;
+}
+
+#image {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
