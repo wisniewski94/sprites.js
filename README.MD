@@ -1,7 +1,7 @@
 ![logo](docs/img/sprites.js.png)
 
 
-JavaScript lightweight and simple in usage library that helps animating canvas sprites. What makes sprite.js so special is ability to controll frame rate without using `setTimeout()` or `setInterval()`.
+JavaScript lightweight and simple in usage library that helps animating canvas sprites. What makes sprite.js so special is ability to controll frame rate without using `setTimeout()` or `setInterval()`. Visit [Demo page](https://wisniewski94.github.io/sprites.js/).
 
 ## Getting Started
 ### 1. Download
@@ -18,7 +18,7 @@ $ bower install sprites.js
 ### 2. Insert required files
 In the page's footer, just before `</body>`, include Javascript files:
 ```html
-<script src="sprites.js"></script>
+<script src="sprites.min.js"></script>
 <script src="custom.js"></script>
 ```
 ### 3. Create the HTML markup
@@ -122,9 +122,9 @@ this.render(frame);
 ## Contribute
 This plugin is made by community for community. If you want to help develop this project you can do it by:
 
-Report a bug
-Ask for a feature
-Submit a pull request
+[Report a bug](https://github.com/wisniewski94/sprites.js/issues)
+[Ask for a feature](https://github.com/wisniewski94/sprites.js/issues)
+[Submit a pull request](https://github.com/wisniewski94/sprites.js/pulls)
 
 ### Donate
 <a href='https://pledgie.com/campaigns/34691'><img alt='Click here to lend your support to: Open Source Projects - wisniewski94 and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/34691.png?skin_name=chrome' border='0' ></a>

@@ -1,12 +1,16 @@
 {
-  "name": "sprites.js",
-  "version": "1.0.0",
-  "description": "Sprites.js is simple canvas sprites animation library. No setTimeout() or setInterval(). Just rAF.",
-  "main": "sprite.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
+    "name": "sprites.js",
+    "version": "1.0.1",
+    "description": "Sprites.js is simple canvas sprites animation library. No setTimeout() or setInterval(). Just rAF.",
+    "main": "sprite.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wisniewski94/sprites.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
     "sprite",
     "canvas",
     "sprites.js",
@@ -16,6 +20,6 @@
     "frontend",
     "javascript"
   ],
-  "author": "Spolka sp.z.o.o.",
-  "license": "MIT"
+    "author": "wisniewski94",
+    "license": "MIT"
 }
