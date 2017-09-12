@@ -55,7 +55,7 @@ Or play animation loop:
 example.loop();
 ```
 
-To see more examples please visit [demo page.](www.wp.pl)
+To see more examples please visit [demo page.](https://wisniewski94.github.io/sprites.js/)
 
 ## Browser Support
 Sprite.js is based on HTML5 Canvas API and requestAnimationFrame which are partially/not supported in Opera Mini Browsers at the moment. These functionalities are the core of this library and cannot be replaced in order to work with older browsers or Opera Mini.
