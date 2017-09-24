@@ -111,12 +111,6 @@ this.pause();
  * @param {number} to -> Default 1.
  */
 this.reset(to);
-
-/**
- * Render specific frame.
- * @param {number} frame. Required.
- */
-this.render(frame);
 ```
 
 ## Contribute
