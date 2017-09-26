@@ -32,24 +32,25 @@ function Sprite(opt) {
         playing = true;
     };
 
-    this.play = function (fps, from, to, n) {
+    this.play = function (e) {
         if (playing && err) throw playErr;
-        if (to > frames && err) throw rangeErr;
-        if (from < 1 && err) throw rangeErr;
-        if (fps == null) fps = 60;
-        if (from == null) from = 0;
-        if (to == null) to = frames - 1;
-        if (n == null) n = 1;
+        if (e.to > frames && err) throw rangeErr;
+        if (e.from < 1 && err) throw rangeErr;
+        if (e.fps == null) e.fps = 60;
+        if (e.from == null) e.from = 0;
+        if (e.to == null) e.to = frames - 1;
+        if (e.n == null) e.n = 1;
         if (paused == null || !paused || count !== count || count == null) {
-            if (to > from) count = 0;
-            if (from > to) count = 1;
+            if (e.to > e.from) count = 0;
+            if (e.from > e.to) count = 1;
         }
-        var delay = 1000 / fps;
-        index = from - 1;
-        from--;
-        to--;
+        var delay = 1000 / e.fps;
+        index = e.from - 1;
+        e.from--;
+        e.to--;
         playing = true;
-        rAF2 = requestAnimationFrame(play.bind(null, from, to, n, delay));
+        rAF2 = requestAnimationFrame(play.bind(null, e.from, e.to, e.n, delay));
+        e.callback();
     }
     
     this.pause = function () {
@@ -115,13 +116,11 @@ function Sprite(opt) {
     };//anim
     
     var play = function (from, to, n, delay, timestamp) {
-        console.log(from, to, n);
         rAF2 = requestAnimationFrame(play.bind(null, from, to, n, delay));
         if (time === null) time = timestamp;
         var current = Math.floor((timestamp - time) / delay);
         if (current > frame) {
             frame = current;
-            console.log(index, last);
             if (count >= n && index == last && n !== 0) {
                 cancelAnimationFrame(rAF2);
                 playing = false;

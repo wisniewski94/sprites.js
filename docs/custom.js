@@ -56,21 +56,32 @@ var parrot8 = new Sprite({
     height: 156,
     image_width: 1280
 });
-//parrot;
-parrot.loop(10);
-parrot2.loop(5, "backward");
+parrot.play({fps: 1, to: 9});
+/*parrot2.loop(5, "backward");
 parrot3.loop(8, null, 3);
 parrot8.reset(3);
 parrot6.loop(15);
-parrot7.loop(15, "backward");
+parrot7.loop(15, "backward");*/
 
 document.getElementById('play').onclick = function() {
-    parrot4.play(5, 8, 5, 3);
+    parrot4.play({
+        fps: 10, 
+        from: 8,
+        to: 5, 
+        n: 0,
+        step: function(e){
+            console.log(e);
+        },
+        loop: function(e){
+            console.log(e + "asd");
+        }
+    });
 }
 
 
 document.getElementById('loop').onclick = function() {
-    parrot6.loop(15);
+    //parrot6.loop(15);
+    console.log(123);
 }
 
 document.getElementById('pause').onclick = function() {
@@ -79,7 +90,7 @@ document.getElementById('pause').onclick = function() {
 
 
 document.getElementById('loop2').onclick = function() {
-    parrot7.loop(15, "backward");
+    //parrot7.loop(15, "backward");
 }
 
 document.getElementById('reset').onclick = function() {
