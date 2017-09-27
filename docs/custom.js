@@ -30,7 +30,8 @@ var parrot4 = new Sprite({
     id: 'canvas4',
     width: 160,
     height: 156,
-    image_width: 1280
+    image_width: 1280,
+    err: true
 });
 
 var parrot6 = new Sprite({
@@ -56,7 +57,7 @@ var parrot8 = new Sprite({
     height: 156,
     image_width: 1280
 });
-parrot.play({fps: 1, to: 9});
+parrot.play({fps: 1, from: 0});
 /*parrot2.loop(5, "backward");
 parrot3.loop(8, null, 3);
 parrot8.reset(3);
@@ -66,8 +67,8 @@ parrot7.loop(15, "backward");*/
 document.getElementById('play').onclick = function() {
     parrot4.play({
         fps: 10, 
-        from: 8,
-        to: 5, 
+        from: 1,
+        to: 8, 
         n: 0,
         step: function(e){
             console.log(e);
