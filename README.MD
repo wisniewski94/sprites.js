@@ -105,7 +105,7 @@ this.frame();
  * Pause animation.
  */
 this.pause();
-
+ółż
 /**
  * Reset animation and optionally jump to specific frame.
  * @param {number} to -> Default 1.

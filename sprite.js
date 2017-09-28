@@ -16,7 +16,7 @@ function Sprite(opt) {
         playing = false,
         err     = opt.err,
         playErr = new Error('Animation is already playing'),
-        rangeErr= console.error(new RangeError('Parameter must be between 1 and ' + frames)),
+        rangeErr= new RangeError('Parameter must be between 1 and ' + frames),
         missing = new Error('Missing property'),
         rAF, count, paused;
     
