@@ -3,7 +3,8 @@ var parrot = new Sprite({
     id: 'canvas',
     width: 160,
     height: 156,
-    image_width: 1280
+    image_width: 1280,
+    err: true
 });
 
 var parrot6 = new Sprite({
@@ -43,7 +44,7 @@ document.getElementById('play').onclick = function () {
         to: 1,
         n: 5,
         step: function (e) {
-            console.log('step:', e);
+            //console.log('step:', e);
         },
         loop: function (e) {
             console.log('loop:', e);
@@ -51,18 +52,18 @@ document.getElementById('play').onclick = function () {
     });
 }
 
-parrot.play({
+/*parrot.play({
     fps: 10,
     from: 8,
     to: 1,
     n: 5,
     step: function (e) {
-        console.log('step:', e);
+        //console.log('step:', e);
     },
     loop: function (e) {
         console.log('loop:', e);
     }
-});
+});*/
 
 parrot8.reset(6);
 
