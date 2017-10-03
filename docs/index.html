@@ -54,32 +54,27 @@
 });</code></pre>
         <p>Note: Works only for one canvas.</p>
         </div>
-
-        <div class="e1">
-            <spans>.loop(fps, direction, n)</spans>
-            <div class="ex">
-                <canvas id="canvas"></canvas>
-            </div>
-            <pre><code class="language-javascript">parrot.loop(10)</code></pre>
-            <div class="ex">
-                <canvas id="canvas2"></canvas>
-            </div>
-            <pre><code class="language-javascript">parrot.loop(5, "backward")</code></pre>
-            <div class="ex">
-                <canvas id="canvas3"></canvas>
-            </div>
-            <pre><code class="language-javascript">//play loop forward 3 times
-parrot.loop(8, null, 3)</code></pre>
-        </div>
         
         <div class="e1">
             <spans>.play(fps, from, to, n)</spans>
             <div class="ex">
-                <canvas id="canvas4"></canvas><br>
+                <canvas id="canvas"></canvas><br>
                 <button id="play" class="btn btn-sm">play</button>
             </div>
-            <pre><code class="language-javascript">//play 3 times from 5th to 8th frame at 5fps
-parrot.play(5, 5, 8, 3);</code></pre>
+            <pre><code class="language-javascript">//Play from 8th to 1st frame (backwards) 5 times. 
+//Open console.log to see callback effects.
+parrot.play({
+    fps: 10, 
+    from: 8,
+    to: 1, 
+    n: 5,
+    step: function(e){
+        console.log('step:', e);
+    },
+    loop: function(e){
+        console.log('loop:', e);
+    }
+});</code></pre>
         </div>
         
         <div class="e1">

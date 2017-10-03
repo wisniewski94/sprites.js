@@ -24,9 +24,9 @@ function Sprite(opt) {
     ctx.drawImage(img, index * x, 0, x, y, 0, 0, x, y);
 
     this.play = function (e) {
-        if (playing && err) throw playErr;
-        if (e.to > frames && err) rangeErr;
-        if (e.from < 1 && err) throw rangeErr;
+        if (playing && err) {console.error(playErr); return;};
+        if (e.to > frames && err) {console.error(rangeErr); return;};
+        if (e.from < 1 && err) {console.error(rangeErr); return;};
         if (e.fps == null) e.fps = 60;
         if (e.from == null) e.from = 1;
         if (e.to == null) e.to = frames;
