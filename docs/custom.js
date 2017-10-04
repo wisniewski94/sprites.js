@@ -31,13 +31,13 @@ var parrot8 = new Sprite({
     image_width: 1280
 });
 
-document.getElementById('play').onclick = function () {
+document.getElementById('play').onclick = function() {
     parrot.play({
-        fps: 10,
-        from: 8,
-        to: 1,
-        n: 5,
-        step: function (e) {
+        fps: 10, 
+        from: 1,
+        to: 8, 
+        n: 0,
+        step: function(e){
             console.log('step:', e);
         },
         loop: function (e) {
