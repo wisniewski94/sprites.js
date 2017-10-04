@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <meta property="og:title" content="Sprites.js - simple canvas animation library" />
     <meta property="og:url" content="https://wisniewski94.github.io/sprites.js/" />
     <meta property="og:type" content="website" />
@@ -29,7 +32,8 @@
             <a class="github-button" href="https://github.com/wisniewski94/sprites.js/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download wisniewski94/spritesjs on GitHub">Download</a>
         </div>
         <div class="section1">
-            <p>Sprites.js is simple canvas sprites animation library. No <b>setTimeout()</b> or <b>setInterval()</b>. Just <b>rAF</b>.</p>
+            <ps>Sprites.js is simple canvas sprites animation library. No <b>setTimeout()</b> or <b>setInterval()</b>. Just <b>rAF</b>. </ps>
+            <ps><b>774 bytes</b> gzipped. <b>1,56KB</b> minified.</ps>
             <a class="btn b" href="https://github.com/wisniewski94/sprites.js" role="button">Read docs on Github</a>
         </div>
 
@@ -51,32 +55,27 @@
 });</code></pre>
         <p>Note: Works only for one canvas.</p>
         </div>
-
-        <div class="e1">
-            <spans>.loop(fps, direction, n)</spans>
-            <div class="ex">
-                <canvas id="canvas"></canvas>
-            </div>
-            <pre><code class="language-javascript">parrot.loop(10)</code></pre>
-            <div class="ex">
-                <canvas id="canvas2"></canvas>
-            </div>
-            <pre><code class="language-javascript">parrot.loop(5, "backward")</code></pre>
-            <div class="ex">
-                <canvas id="canvas3"></canvas>
-            </div>
-            <pre><code class="language-javascript">//play loop forward 3 times
-parrot.loop(8, null, 3)</code></pre>
-        </div>
         
         <div class="e1">
             <spans>.play(fps, from, to, n)</spans>
             <div class="ex">
-                <canvas id="canvas4"></canvas><br>
+                <canvas id="canvas"></canvas><br>
                 <button id="play" class="btn btn-sm">play</button>
             </div>
-            <pre><code class="language-javascript">//play 3 times from 5th to 8th frame at 5fps
-parrot.play(5, 5, 8, 3);</code></pre>
+            <pre><code class="language-javascript">//Play from 8th to 1st frame (backwards) 5 times. 
+//Open console.log to see callback effects.
+parrot.play({
+    fps: 10, 
+    from: 8,
+    to: 1, 
+    n: 5,
+    step: function(e){
+        console.log('step:', e);
+    },
+    loop: function(e){
+        console.log('loop:', e);
+    }
+});</code></pre>
         </div>
         
         <div class="e1">
@@ -114,7 +113,7 @@ parrot.reset(5);</code></pre>
         <p class="a">MIT License</p>
     </div>
     <script src="prism.js"></script>
-    <script src="sprite.js"></script>
+    <script src="sprites.js"></script>
     <script src="custom.js"></script>
 
 </body>
