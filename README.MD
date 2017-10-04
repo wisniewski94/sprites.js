@@ -89,7 +89,7 @@ These options can be used only on sprite initialization:
 
 /**
  * Play animation. You can set range of animation, fps, and number of passes (loops). Two callbacks available in object parameter.
- * @param {object} fps -> Default 60.
+ * @param {object} 
  */
 this.play({
 //Check settings table
