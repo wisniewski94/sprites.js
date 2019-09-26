@@ -121,8 +121,3 @@ This plugin is made by community for community. If you want to help develop this
 [Ask for a feature](https://github.com/wisniewski94/sprites.js/issues)
 
 [Submit a pull request](https://github.com/wisniewski94/sprites.js/pulls)
-
-### Donate
-<a href='https://pledgie.com/campaigns/34691'><img alt='Click here to lend your support to: Open Source Projects - wisniewski94 and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/34691.png?skin_name=chrome' border='0' ></a>
-
-If you find this project useful you can also consider buying me a small coffee :)
