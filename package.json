@@ -1,6 +1,6 @@
 {
     "name": "sprites.js",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Sprites.js is simple canvas sprites animation library. No setTimeout() or setInterval(). Just rAF.",
     "main": "sprite.js",
     "repository": {
