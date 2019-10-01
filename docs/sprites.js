@@ -2,31 +2,33 @@
 
 function Sprite(opt) {
     //private settings
-    var cvs     = document.getElementById(opt.id),
-        x       = cvs.width = opt.width,
-        y       = cvs.height = opt.height,
-        ctx     = cvs.getContext('2d'),
-        img     = new Image();
+    var cvs = document.getElementById(opt.id),
+        x = cvs.width = opt.width,
+        y = cvs.height = opt.height,
+        ctx = cvs.getContext('2d'),
+        img = new Image();
 
     //config
-    var frame   = -1,
-        time    = null,
+    var frame = -1,
+        time = null,
         playing = false,
-        err     = opt.err,
-        frames  = opt.image_width ? (opt.image_width / x) : (function (){throw missing}()),
+        err = opt.err,
+        frames = opt.image_width ? (opt.image_width / x) : (function () { throw missing }()),
         playErr = new Error('Animation is already playing'),
-        rangeErr= new RangeError('Parameter must be between 1 and ' + frames),
+        rangeErr = new RangeError('Parameter must be between 1 and ' + frames),
         missing = new Error('Missing property'),
         rAF, count, paused, index;
 
     img.src = opt.src;
-    ctx.drawImage(img, 0 * x, 0, x, y, 0, 0, x, y);
+    img.onload = () => {
+        ctx.drawImage(img, 0 * x, 0, x, y, 0, 0, x, y);
+    }
 
 
     this.play = function (e) {
-        if (playing) {if(err) console.error(playErr); return;};
-        if (e.to > frames || e.to < 1) {if(err) console.error(rangeErr); return;};
-        if (e.from < 1 || e.from > frames) {if(err) console.error(rangeErr); return;};
+        if (playing) { if (err) console.error(playErr); return; };
+        if (e.to > frames || e.to < 1) { if (err) console.error(rangeErr); return; };
+        if (e.from < 1 || e.from > frames) { if (err) console.error(rangeErr); return; };
         if (e.fps == null) e.fps = 60;
         if (e.from == null) e.from = 1;
         if (e.to == null) e.to = frames;
@@ -44,7 +46,7 @@ function Sprite(opt) {
     }
 
     this.pause = function () {
-        if (!playing) {if(err) console.error(playErr); return;};
+        if (!playing) { if (err) console.error(playErr); return; };
         cancelAnimationFrame(rAF);
         playing = false;
         paused = true;
@@ -61,7 +63,7 @@ function Sprite(opt) {
         ctx.drawImage(img, (--to) * x, 0, x, y, 0, 0, x, y);
     };
 
-    this.frame = function() {
+    this.frame = function () {
         return index + 1;
     };
 
@@ -92,7 +94,7 @@ function Sprite(opt) {
                 }
             } else if (from > to) {
                 if (index <= to) {
-                    typeof callback1 === 'function' && callback1(index + 1);                    
+                    typeof callback1 === 'function' && callback1(index + 1);
                     index = from;
                 } else {
                     typeof callback1 === 'function' && callback1(index + 1);
